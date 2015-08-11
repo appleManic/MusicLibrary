@@ -65,7 +65,7 @@ extension ViewController: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         if let albumData = currentAlbumData {
             print("the ttle: \(albumData.titles[indexPath.row]) value : \(albumData.values[indexPath.row])")
             // cell.textLabel!.text = albumData.titles[indexPath.row]
